@@ -6,7 +6,7 @@ file=file.readlines()
 
 inputs = []
 for line in file:
-    line.strip().replace("\n","")
+    line = line.strip().replace("\n","")
     inputs.append(int(line))
 
 cum_total = 0
