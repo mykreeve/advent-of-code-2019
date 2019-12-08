@@ -202,10 +202,6 @@ for phase_settings in phase_permutations:
             break
         else:
             print ("Problem with execution:", programs[amp_running][positions[amp_running]])
-        # amp_running += 1
-        # position = positions[amp_running]
-        # inputs = [phase_settings[amp_running], input_signal]
-
 
     # print("Output for:", phase_settings, '=', input_signal)
     if input_signal > best_output:
