@@ -1,6 +1,6 @@
 import copy
 
-filename="input/day9testinput.txt"
+filename="input/day9input.txt"
 file=open(filename,"r")
 file=file.readlines()
 
