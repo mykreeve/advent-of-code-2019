@@ -1,3 +1,5 @@
+import copy
+
 filename="input/day16input.txt"
 file=open(filename,"r")
 file=file.readlines()
@@ -5,6 +7,8 @@ file=file.readlines()
 for line in file:
     line = line.replace("\n","")
     value = list(line)
+
+original_value = copy.deepcopy(value)
 
 length = (len(value))
 
@@ -42,6 +46,8 @@ print("Answer for part one: ", end="")
 for a in range(0,8):
     print(value[a],end="")
 print("")
+
+value = copy.deepcopy(original_value)
 
 offset = ''
 for a in range(0,7):
