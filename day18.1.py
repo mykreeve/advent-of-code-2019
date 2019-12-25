@@ -78,7 +78,7 @@ while len(queue) > 0:
         print("Reached time:", str(time), " - There are", len(queue), "options left in the queue")
     options = get_options(position,collected_keys,maze,visited,time)
     if len(collected_keys) == len(keys):
-        print("Got all the keys after", str(time), "steps")
+        print("Answer for part one:", str(time))
         exit()
     for o in options:
         heapq.heappush(queue, o)
