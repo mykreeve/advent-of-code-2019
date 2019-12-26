@@ -248,7 +248,7 @@ while spaces_around(position, grid) < 3:
     route.append(turn)
 route.pop()
 
-# print("Route through scaffolding:",','.join(route))
+print("Route through scaffolding:",','.join(route))
 
 # Examined by using eyeballs to generate these inputs:
 # A,B,B,C,C,A,B,B,C,A
@@ -266,12 +266,13 @@ def get_input_value():
     global string_being_entered
     string_chr_position += 1
     if string_chr_position == len(strings[string_being_entered]):
-        # print("Finishing sending string:",strings[string_being_entered])
+        print("Finishing sending string:",strings[string_being_entered])
         string_being_entered += 1
         string_chr_position = -1
         return ord("\n")
     return ord(strings[string_being_entered][string_chr_position])
 
+message = []
 input_value = 0
 position = 0
 relative_base = 0
@@ -355,6 +356,11 @@ while program[position] != 99:
             x = (program[relative_base+program[position+1]])
         if x > 255:
             print("Answer to part two:", x)
+        elif x == 10:
+            print(''.join(message))
+            message = []
+        else:
+            message.append(chr(x))
         position += 2
     elif opcode == 5:
         if a != 0:
